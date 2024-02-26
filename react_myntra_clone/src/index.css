@@ -12,8 +12,8 @@ header {
   align-items: center;
   border-bottom: 1px solid #b6b1b1;
 }
-.myntra_home {
-  height: 66px;
+._home {
+  height: 45px;
 }
 .logo_container {
   margin-left: 4%;
@@ -33,7 +33,7 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 28px 0;
+  padding: 27px 0;
   border-bottom: 5px solid #ffffff;
 }
 .nav_bar a:hover {
@@ -211,7 +211,6 @@ header {
   margin-top: 8px;
   font-size: 18px;
   width: 100%;
-  background-color: lightgreen;
   border: none;
   padding: 5px 15px;
   border-radius: 10px;
@@ -235,6 +234,7 @@ header {
 }
 .action_container {
   text-decoration: none;
+  cursor: pointer;
 }
 a.action_container:link {
   color:black;
@@ -374,4 +374,8 @@ a.action_container:link {
   width: 14px;
   height: 14px;
   cursor: pointer;
+}
+
+.spinner {
+  margin: 100px 0px;
 }

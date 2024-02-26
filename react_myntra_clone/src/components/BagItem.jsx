@@ -1,23 +1,15 @@
-import React from "react";
+import { RiDeleteBin5Fill } from "react-icons/ri";
+import { useDispatch } from "react-redux";
+import { bagActions } from "../store/bagSlice";
 
-function BagItem() {
-  const item = {
-    id: "001",
-    image: "images/1.jpg",
-    company: "Carlton London",
-    item_name: "Rhodium-Plated CZ Floral Studs",
-    original_price: 1045,
-    current_price: 606,
-    discount_percentage: 42,
-    return_period: 14,
-    delivery_date: "10 Oct 2023",
-    rating: {
-      stars: 4.5,
-      count: 1400,
-    },
+function BagItem({ item }) {
+  const dispatch = useDispatch();
+
+  const handleRemoveItem = () => {
+    dispatch(bagActions.removeFromBag(item.id));
   };
   return (
-    <div className="bag-items-container">
+    <div className="bag-item-container">
       <div className="item-left-part">
         <img className="bag-item-img" src={item.image} />
       </div>
@@ -39,8 +31,8 @@ function BagItem() {
           Delivery by
           <span className="delivery-details-days">{item.delivery_date}</span>
         </div>
-        <div className="remove-from-cart" onClick={() => {console.log("Item remove from Cart")}}>
-          X
+        <div className="remove-from-cart" onClick={handleRemoveItem}>
+          <RiDeleteBin5Fill />
         </div>
       </div>
     </div>
