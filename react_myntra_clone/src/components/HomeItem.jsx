@@ -1,10 +1,8 @@
 import React from "react";
 
-const HomeItem = ({ items }) => {
+const HomeItem = ({ item }) => {
   return (
-    <div>
-    {items.map((item)=>(
-      <div key={item.id} className="item-container">
+      <div className="item-container">
       <img className="item-image" src={item.image} alt="item image" />
       <div className="rating">
         {" "}
@@ -27,9 +25,7 @@ const HomeItem = ({ items }) => {
         Add to Bag
       </button>
     </div>
-   ) )}
-</div>
-  );
+   ) 
 };
 
 export default HomeItem;

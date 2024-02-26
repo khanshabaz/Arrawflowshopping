@@ -1,19 +1,19 @@
 import React from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FaFaceGrinHearts,FaBagShopping } from "react-icons/fa6";
-
+import {Link} from "react-router-dom"
 function Header() {
   return (
     <>
       <header>
         <div className="logo_container">
-          <a href="#">
+          <Link to="/">
             <img
               className="myntra_home"
-              src="images/myntra_logo.webp"
+              src="images/e-commerce1.png"
               alt="Myntra Home"
             />
-          </a>
+          </Link>
         </div>
         <nav className="nav_bar">
           <a href="#">Men</a>
@@ -43,11 +43,11 @@ function Header() {
             <span className="action_name">Wishlist</span>
           </div>
 
-          <a className="action_container" href="pages/bag.html">
+          <Link className="action_container" to="bag">
           <FaBagShopping />
             <span className="action_name">Bag</span>
             <span className="bag-item-count">0</span>
-          </a>
+          </Link>
         </div>
       </header>
     </>
